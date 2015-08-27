@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Search</title>
+  
+ </head>
+ <body>
+  <center><p><b>Search</b><br>
+   <input type="text" id="1" size="50">
+  </p></center>
+  
+  
+  <center>
+  <input type="radio" id="s1" name="pin" value="https://www.google.ru/search?q=" checked>GOOGLE
+  <input type="radio" id="s2" name="pin" value="http://yandex.ru/search/?text=">YANDEX
+  </center>
+  <center>
+<input type="button" onClick="Search()" value="Go Now!">
+   </center>
+   <script>
+function Search(){
+    var x=document.getElementById("1").value
+  if (document.getElementById('s1').checked) {
+    y = document.getElementById('s1').value;
+  } else {
+  y = document.getElementById('s2').value;}
+  window.location.href = y+x
+}
+   </script>
+ </body>
+</html>
